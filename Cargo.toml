@@ -1,0 +1,46 @@
+[package]
+name = "evmpeek-cli"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "evmpeek-cli"
+path = "src/main.rs"
+required-features = ["cli"]
+
+[build-dependencies]
+# used to generate constants
+vergen = { version = "7.0", default-features = false, features = ["build", "rustc", "git"] }
+
+[dependencies]
+
+
+# async
+tokio = { version = "1", features = ["time"] }
+parking_lot = "0.12"
+futures = "0.3"
+async-trait = "0.1"
+
+
+# cli
+clap = { version = "4.0", features = ["derive", "env", "wrap_help"], optional = true }
+clap_complete = { version = "4.0", optional = true }
+chrono = "0.4.19"
+auto_impl = "0.5.0"
+ctrlc = { version = "3", optional = true }
+fdlimit = { version = "0.2.1", optional = true }
+clap_complete_fig = "4.0"
+ethereum-forkid = "0.11"
+
+
+# tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+
+
+
+[features]
+default = ["cli"]
+cmd = ["clap", "clap_complete", "ctrlc"]
+cli = ["tokio/full", "cmd", "fdlimit"]
