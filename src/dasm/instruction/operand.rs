@@ -1,4 +1,5 @@
-use crate::OPCode;
+use crate::dasm::instruction::OPCode;
+
 fn slice_min(bytecode: &[u8], max: usize) -> &[u8] {
     let min = std::cmp::min(bytecode.len(), max);
     &bytecode[..min]

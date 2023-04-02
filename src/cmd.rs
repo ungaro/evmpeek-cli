@@ -8,6 +8,7 @@ use tracing::{error, trace};
 use crate::dasm::{ByteCodeReader, Instructions};
 use crate::dasm::{Disassembler, Instruction, OPCode};
 
+use std::fmt::Write;
 
 
 #[derive(Clone, Debug, Parser)]
@@ -70,7 +71,7 @@ impl NodeArgs {
 
         let bytes = hex::decode(self.bytecode.unwrap_or("No bytecode available".to_string()))?;
 
-        let dasm = evmdasm::Disassembler::new(&bytes);
+        let dasm = Disassembler::new(&bytes);
         let instructions = dasm.disassemble();
     
         for ins in instructions {
