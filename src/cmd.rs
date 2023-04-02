@@ -1,9 +1,14 @@
+
 use clap::Parser;
 
 use futures::FutureExt;
 
 use tokio::time::{Instant, Interval};
 use tracing::{error, trace};
+use crate::dasm::{ByteCodeReader, Instructions};
+use crate::dasm::{Disassembler, Instruction, OPCode};
+
+
 
 #[derive(Clone, Debug, Parser)]
 pub struct NodeArgs {
@@ -60,8 +65,24 @@ impl NodeArgs {
     /// See also [crate::spawn()]
     pub async fn run(self) -> Result<(), Box<dyn std::error::Error>> {
         println!("hello world");
-        println!("{}", self.bytecode.unwrap_or("No bytecode available".to_string()));
         
+
+
+        let bytes = hex::decode(self.bytecode.unwrap_or("No bytecode available".to_string()))?;
+
+        let dasm = evmdasm::Disassembler::new(&bytes);
+        let instructions = dasm.disassemble();
+    
+        for ins in instructions {
+            let mut buffer = String::new();
+            write!(&mut buffer, "{:>08X}| {:X?}", ins.offset, ins.opcode)?;
+            if let Some(operand) = ins.operand {
+                write!(&mut  buffer, " 0x{}", hex::encode(operand))?;
+            }
+            println!("{}", buffer);
+        }
+    
+
 
         Ok(())
     }

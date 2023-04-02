@@ -1,5 +1,6 @@
 //! The `evmpeek` cli
 mod cmd;
+mod dasm;
 
 use crate::cmd::NodeArgs;
 
