@@ -65,9 +65,7 @@ impl NodeArgs {
     ///
     /// See also [crate::spawn()]
     pub async fn run(self) -> Result<(), Box<dyn std::error::Error>> {
-        println!("hello world");
-        
-
+        println!("====== DISASSAMBLING CONTRACT ======");
 
         let bytes = hex::decode(self.bytecode.unwrap_or("No bytecode available".to_string()))?;
 
