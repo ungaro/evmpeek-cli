@@ -25,7 +25,7 @@ Documentation for all of evmpeek-cli is available in the [wiki](https://alpguney
 
 ## Examples
 
-Examples for heimdall-rs modules are available in the [wiki]https://alpguneysel.com/sw/evmpeek-cli/examples).
+Examples for evmpeek-rs modules are available in the [wiki]https://alpguneysel.com/sw/evmpeek-cli/examples).
 
 ## Contributing
 
