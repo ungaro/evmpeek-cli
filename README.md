@@ -27,11 +27,6 @@ Documentation for all of evmpeek-cli is available in the [wiki](https://alpguney
 
 Examples for evmpeek-rs modules are available in the [wiki]https://alpguneysel.com/sw/evmpeek-cli/examples).
 
-## Contributing
-
-If you'd like to contribute to Evmpeek-cli or add a module, please open a pull-request with your changes, as well as detailed information on what is changed, added, or improved.
-
-For more detailed information, see the [contributing guide](https://alpguneysel.com/sw/evmpeek-cli/wiki/contributing).
 
 ## Issues
 
