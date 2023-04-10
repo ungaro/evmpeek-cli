@@ -35,4 +35,4 @@ If you've found an issue or have a question, please open an issue [here](https:/
 ## Credits
 - Alp Guneysel
 
-A list of all [contributors](https://os.alpguneysel.com/wiki/evmpeek-cli/contributors) can be found in the wiki.
+A list of all [contributors](https://os.alpguneysel.com/contributors/evmpeek-cli/) can be found in the wiki.
