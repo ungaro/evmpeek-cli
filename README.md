@@ -28,9 +28,6 @@ Documentation for all of evmpeek-cli is available in the [wiki](https://os.alpgu
 Examples for evmpeek-rs modules are available in the [wiki]https://os.alpguneysel.com/examples/evmpeek-cli/).
 
 
-## Issues
-
-If you've found an issue or have a question, please open an issue [here](https://os.alpguneysel.com/issues/evmpeek-cli/. All issues must follow their respective templates.
 
 ## Credits
 - Alp Guneysel
