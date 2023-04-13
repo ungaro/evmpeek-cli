@@ -18,12 +18,4 @@ Ensure that Rust & Cargo are installed:
 curl https://sh.rustup.rs -sSf | sh
 ```
 
-TODO - FILL HERE
-## Documentation
-
-Documentation for all of evmpeek-cli is available in the [wiki](https://os.alpguneysel.com/docs/evmpeek-cli/).
-
-## Examples
-
-Examples for evmpeek-rs modules are available in the [wiki]https://os.alpguneysel.com/examples/evmpeek-cli/).
-
+TODO - COMPLETE DOCS
